@@ -206,6 +206,7 @@ We recommend supplying LDAR-Sim with a full set of parameters, copied from the d
 
 As noted previously, LDAR-Sim uses a 4 level hierarchy of simulations, virtual world, programs and methods parameters. To tell LDAR_Sim what level in the hierarchy your parameter file is destined for, you must specify a `parameter\_level` parameter that will specify what level your parameter file is aimed at.
 
+
 The `parameter_level` parameter can be one of three values:
 
 - `simulation_settings`: parameters are aimed at the simulation setting level.
@@ -553,7 +554,7 @@ Weather file sizes can become quite large, especially when spatial and temporal 
 **Note:** The repair cost parameter can be specifically set at a more granular level through the [virtual world defining files](#10-virtual-world-defining-files).
 
 #### &lt;values&gt; (cost) _(propagating parameter)_
-
+  
 **Data Type:** List of floats/numerics
 
 **Default input:** [200]

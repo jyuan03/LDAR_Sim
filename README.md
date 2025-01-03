@@ -166,6 +166,18 @@ The main program is a python script called LDAR_Sim_run.py. Within the virtual e
 
 ```Python LDAR_Sim_run.py ./simulations/Simulation_settings.yaml ./simulations/virtual_world.yaml ./simulations/P_aircraft.yaml ./simulations/P_none.yaml ./ simulations/M_aircraft.yaml ./simulations/M_OGI_FU.```
 
+~~~~PLACEHOLDER FOR INPUTS~~~
+~~~BV
+Python LDAR_Sim_run.py ./simulations/BV/Simulation_settings.yaml ./simulations/BV/virtual_world.yaml ./simulations/BV/P_aircraft.yaml ./simulations/BV/P_drone.yaml ./simulations/BV/P_OGI.yaml ./simulations/BV/P_stationary.yaml ./simulations/BV/P_truck.yaml ./simulations/BV/P_none.yaml ./simulations/BV/M_aircraft.yaml ./simulations/BV/M_drone.yaml ./simulations/BV/M_OGI.yaml ./simulations/BV/M_stationary.yaml ./simulations/BV/M_truck.yaml ./simulations/BV/M_OGI_FU.yaml
+~~~DV 
+Python LDAR_Sim_run.py ./simulations/dv/Simulation_settings.yaml ./simulations/dv/virtual_world.yaml ./simulations/dv/P_aircraft.yaml ./simulations/dv/P_drone.yaml ./simulations/dv/P_OGI.yaml ./simulations/dv/P_stationary.yaml ./simulations/dv/P_truck.yaml ./simulations/dv/P_none.yaml ./simulations/dv/M_aircraft.yaml ./simulations/dv/M_drone.yaml ./simulations/dv/M_OGI.yaml ./simulations/dv/M_stationary.yaml ./simulations/dv/M_truck.yaml ./simulations/dv/M_OGI_FU.yaml
+~~~EDM
+Python LDAR_Sim_run.py ./simulations/EDM/Simulation_settings.yaml ./simulations/EDM/virtual_world.yaml ./simulations/EDM/P_aircraft.yaml ./simulations/EDM/P_drone.yaml ./simulations/EDM/P_OGI.yaml ./simulations/EDM/P_stationary.yaml ./simulations/EDM/P_truck.yaml ./simulations/EDM/P_none.yaml ./simulations/EDM/M_aircraft.yaml ./simulations/EDM/M_drone.yaml ./simulations/EDM/M_OGI.yaml ./simulations/EDM/M_stationary.yaml ./simulations/EDM/M_truck.yaml ./simulations/EDM/M_OGI_FU.yaml
+
+
+
+Python LDAR_Sim_run.py ./simulations/Simulation_settings.yaml ./simulations/virtual_world.yaml ./simulations/P_aircraft.yaml ./simulations/P_none.yaml ./ simulations/M_aircraft.yaml ./simulations/M_OGI_FU.
+
 alternatively, an entire directory can be passed using the "-P", "--in_dir" flags where all files within the directory are added to the program. for example:
 
  ```Python LDAR_Sim_run.py --in_dir ./simulations```
@@ -184,7 +196,7 @@ Several LDAR-Sim advances are not publicly available at this time, including mor
 
 The included python code follows strict PEP8 Standards for formatting with a modification to the Line Length rule, where lines cannot exceed 100 characters. Contributed code will be rejected if it does not meet this standard. We require using Black for code formatting when making contributions. Using a PEP8 compliant linter(ex.Flake8) of your choice is also strongly recommended.
 
-Example command to run black in cmd: ```black --line-length 100 LDAR_Sim```
+Example command to run black in cmd: ```black --line-length 100 LDAR_Sim``` 747519270849
 
 When submitting Issues, Commits and Pull Requests, please use the provided templates to ensure consistent format. For instructions on how to setup the LDAR-Sim commit message template please see the [Setup Instructions](LDAR_Sim/install/SetupInstructions.md)
 

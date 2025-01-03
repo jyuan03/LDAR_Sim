@@ -97,7 +97,7 @@ class Equipment_Group:
         if rep_epr is not None and rep_epr > 0:
             prop_params[IC.Equipment_Group_File_Constants.REP_EMIS_EPR] = rep_epr / total_components
         for col, val in cleaned_info.items():
-            for count in range(0, val):
+            for count in range(0, val): #error occurred
                 self._component.append(Component(col, count, infrastructure_inputs, prop_params))
 
     def _set_method_specific_params(self, prop_params):
