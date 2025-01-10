@@ -239,8 +239,7 @@ class Component:
         detectable_emissions: list[Emission] = []
         for emis in self._active_emissions:
             if emis.check_spatial_cov(method_name) and emis.is_emitting():
-                if emis.check_temporal_cov(method_name):
-                    detectable_emissions.append(emis)
+                detectable_emissions.append(emis)
 
         return detectable_emissions
 

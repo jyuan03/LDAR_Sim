@@ -33,7 +33,6 @@ class IntermittentNonRepairableEmission(IntermittencyMixin, NonRepairableEmissio
         simulation_start_date: date,
         repairable: bool,
         tech_spatial_coverage_probabilities: dict[str, float],
-        tech_temporal_coverage_probabilities: dict[str, float],
         duration: int,
         active_duration: int,
         inactive_duration: int,
@@ -47,7 +46,6 @@ class IntermittentNonRepairableEmission(IntermittencyMixin, NonRepairableEmissio
             simulation_start_date,
             repairable,
             tech_spatial_coverage_probabilities,
-            tech_temporal_coverage_probabilities,
             duration,
         )
 

@@ -185,7 +185,7 @@ If running LDAR-Sim on the Windows operating system, you may encounter errors re
 
 ## Enabling Long File Paths in Git
 
-1. Run command prompt as administrator:
+1. Run command prompt as administrator: 
 2. Type in the following command:
 
   ```cmd
