@@ -1,0 +1,30 @@
+adjusted equipment_groups.py file
+
+ERROR:
+Traceback (most recent call last):
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\LDAR_Sim_run.py", line 108, in <module>
+    run_ldar_sim(parameter_filenames, _DEBUG)
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\LDAR_Sim_run.py", line 66, in run_ldar_sim
+    raise e
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\LDAR_Sim_run.py", line 51, in run_ldar_sim
+    simulation_manager.setup_infrastructure()
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\simulation\simulation_manager.py", line 180, in setup_infrastructure
+    self.infrastructure, self.hash_file_exists = initialize_infrastructure(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\initialization\initialize_infrastructure.py", line 99, in initialize_infrastructure
+    infrastructure: Infrastructure = Infrastructure(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\infrastructure.py", line 61, in __init__
+    self.generate_infrastructure(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\infrastructure.py", line 259, in generate_infrastructure
+    new_site = Site(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\sites.py", line 80, in __init__
+    self._create_equipment_groups(equipment_groups, infrastructure_inputs, propagating_params)
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\sites.py", line 178, in _create_equipment_groups
+    Equipment_Group(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\equipment_groups.py", line 46, in __init__
+    self._create_components(
+  File "C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\LDAR_Sim\LDAR_Sim\src\virtual_world\equipment_groups.py", line 100, in _create_components
+    for count in range(0, val):
+TypeError: 'numpy.float64' object cannot be interpreted as an integer
+
+
+Python LDAR_Sim_run.py ./simulations/EDM/Simulation_settings.yaml ./simulations/EDM/virtual_world.yaml ./simulations/EDM/P_aircraft.yaml ./simulations/EDM/P_drone.yaml ./simulations/EDM/P_OGI.yaml ./simulations/EDM/P_stationary.yaml ./simulations/EDM/P_truck.yaml ./simulations/EDM/P_none.yaml ./simulations/EDM/M_aircraft.yaml ./simulations/EDM/M_drone.yaml ./simulations/EDM/M_OGI.yaml ./simulations/EDM/M_stationary.yaml ./simulations/EDM/M_truck.yaml ./simulations/EDM/M_OGI_FU.yaml

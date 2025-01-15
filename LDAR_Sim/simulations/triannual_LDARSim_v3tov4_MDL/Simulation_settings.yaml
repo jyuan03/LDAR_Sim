@@ -1,0 +1,7 @@
+input_directory: ./inputs/triannual_LDARSim_v3tov4_MDL
+simulation_count: 3
+output_directory: ./outputs/triannual_LDARSim_v3tov4_MDL
+parameter_level: simulation_settings
+preseed_random: true
+baseline_program: P_none
+version: "4.0"

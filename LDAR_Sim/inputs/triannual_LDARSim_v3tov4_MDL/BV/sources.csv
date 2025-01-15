@@ -1,0 +1,3 @@
+component,source,EPR,ERS,repairable,duration,multiple_emissions
+comp1,BV_OneStop,0.005,BV_OneStop,TRUE,365,TRUE
+comp2,test2,0.005,test2,FALSE,365,TRUE

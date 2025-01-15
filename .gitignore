@@ -10,8 +10,6 @@
 *.nc
 *.p
 .hypothesis/
-LDAR_Sim/inputs/
-LDAR_Sim/simulations/
 Benchmarking/
 **/BenchmarkingResults
 **/generator/
