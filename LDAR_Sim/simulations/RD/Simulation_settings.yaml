@@ -1,8 +1,8 @@
 
 #~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
-input_directory: ./inputs/triannual_LDARSim4_MH
+input_directory: ./inputs/triannual_LDARSim4_RD
 simulation_count: 5
-output_directory: ./outputs/triannual_LDARSim4_MH
+output_directory: ./outputs/triannual_LDARSim4_RD
 parameter_level: simulation_settings
 preseed_random: true
 baseline_program: P_none

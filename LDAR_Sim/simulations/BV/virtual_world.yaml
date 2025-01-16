@@ -3,7 +3,7 @@
 #~~~~~CHANGE SITEFILE FOR REGION~~~~~~~~~~~~~~~
 version: "4.0"
 parameter_level: virtual_world
-site_samples: 11
+site_samples: 10
 emissions:
   emissions_file: "emissions_CE.csv" #File containing sample emissions rates or emissions distributions.
   repairable_emissions:

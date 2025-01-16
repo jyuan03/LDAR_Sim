@@ -1,4 +1,4 @@
-program_name: P_stationary
+program_name: P_drone
 parameter_level: programs
 version: "4.0"
 method_labels:

@@ -1,9 +1,8 @@
 
 #~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
-input_directory: C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\temp\LDAR_Sim\LDAR_Sim\inputs\granular_infrastructure
-simulation_count: 3
-output_directory: C:\Users\jyuan\OneDrive\Documents\GitHub\FEAST\LDAR_Sim_v4\temp\LDAR_Sim\LDAR_Sim\outputs\triannual_LDARSim4_test
-
+input_directory: ./inputs/triannual_LDARSim4_DV
+simulation_count: 5
+output_directory: ./outputs/triannual_LDARSim4_DV
 parameter_level: simulation_settings
 preseed_random: true
 baseline_program: P_none

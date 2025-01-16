@@ -1,7 +1,7 @@
 
 #~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
 input_directory: ./inputs/triannual_LDARSim4_BV
-simulation_count: 3
+simulation_count: 5
 output_directory: ./outputs/triannual_LDARSim4_BV
 parameter_level: simulation_settings
 preseed_random: true

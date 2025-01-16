@@ -1,0 +1,152 @@
+boto3
+botocore
+cdsapi
+hypothesis
+matplotlib
+netCDF4
+numpy
+pandas
+pyephem
+pytest
+pytest_mock
+PyYAML
+scipy
+seaborn
+sortedcontainers
+typing_extensions
+xarray
+attrs
+blosc
+boto3
+botocore
+brotli
+bzip2
+ ca-certificates
+ cads-api-client
+ cdsapi
+ certifi
+ cftime
+ colorama
+ charset-normalizer
+ contourpy
+ cycler
+ ephem
+ fonttools
+ freetype
+ glib
+ glib-tools
+ gst-plugins-base
+ gstreamer
+ hdf4
+ hdf5
+ icu
+ idna
+ jmespath
+ intel-openmp
+ kiwisolver
+ krb5
+ lcms2
+ libaec
+ lerc
+ libblas
+ libbrotlicommon
+ libbrotlidec
+libbrotlienc
+ libcblas
+ libclang13
+ libcurl
+ libdeflate
+ libexpat
+ libffi
+ libflang
+ libglib
+ libhwloc
+ libiconv
+ libintl
+ libintl-devel
+ libjpeg-turbo
+ liblapack
+ libnetcdf
+ libogg
+ libopenblas
+ libpng
+ libsqlite
+ libssh2
+ libtiff
+ libvorbis
+ libwebp-base
+ libxcb
+ libxml2
+ libzip
+ libzlib
+ llvm-meta
+ lz4-c
+ m2w64-gcc-libgfortran
+ m2w64-gcc-libs
+ m2w64-gcc-libs-core
+ m2w64-gmp
+ m2w64-libwinpthread-git
+ matplotlib
+ matplotlib-base
+ mkl
+ msys2-conda-epoch
+ multiurl
+ munkres
+ netcdf4
+ numpy
+ openjpeg
+ openmp
+ openssl
+ packaging
+ pandas
+ patsy
+ pcre2
+ pillow
+ pip
+ ply
+ pthread-stubs
+ pthreads-win32
+ pyparsing
+pyqt
+ pyqt5-sip
+ pysocks
+ python
+ python-dateutil
+ python-tzdata
+ python_abi
+ pytz
+pyyaml
+ qt-main
+requests
+ s3transfer
+ scipy
+ seaborn
+ seaborn-base
+ setuptools
+sip
+six
+ snappy
+ sortedcontainers
+ statsmodels
+tbb
+tk
+toml
+tomli
+tornado
+ tqdm
+ typing-extensions
+typing_extensions
+ tzdata
+ ucrt
+ urllib3
+ vc
+ vc14_runtime
+ vs2015_runtime
+wheel
+ win_inet_pton
+xorg-libxau
+ xorg-libxdmcp
+ xz
+yaml
+zlib
+zstd
