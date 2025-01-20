@@ -1,0 +1,16 @@
+parameter_level: methods
+version: "4.0"
+method_name: OGI_FU
+deployment_type: mobile
+measurement_scale: component
+sensor:
+  type: OGI_camera_zim
+  minimum_detection_limit: [0.0053] #adapted from 19g/h detection limit from https://www.flir.ca/instruments/optical-gas-imaging/#:~:text=Your%20optical%20gas%20imaging%20equipment%20must%20be%20capable%20of%20detecting,≤1%20meter%2Fsecond).
+
+is_follow_up: True
+cost:
+  per_day: 0
+  per_site: 500
+time_between_sites:
+  values: [30]
+survey_time: 120
