@@ -24,4 +24,4 @@ infrastructure:
 
 weather_file: "weather_alberta.nc"
 start_date: [2022, 1, 1]
-end_date: [2022, 12, 31]
+end_date: [2022, 12, 31]S
