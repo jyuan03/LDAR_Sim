@@ -7,7 +7,7 @@ measurement_scale: equipment
 is_follow_up: False
 sensor:
   type: default
-  minimum_detection_limit: [0.01]
+  minimum_detection_limit: [0.00158] #obtained from 0.00158 g/s from ALLTEC-70 https://cg-e7a81369-5de4-401e-bad8-901e7388d350.s3.us-gov-west-1.amazonaws.com/MDUEWN_Supporting%20Information%2001%20-%20UCalgary%20PoMELO%20METEC%20Detection%202020.pdf?AWSAccessKeyId=AKIAR7FXZINYN2D2KQXG&Signature=7KENa5AsLdo7PYiC2WM7eqQKAok%3D&Expires=1737494957
 cost:
   per_day: 400
 coverage:

@@ -2,4 +2,4 @@ program_name: P_OGI
 parameter_level: programs
 version: "4.0"
 method_labels:
-  - OGI
+  - OGI_mdl_high

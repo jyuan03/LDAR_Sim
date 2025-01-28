@@ -1,13 +1,12 @@
 
 parameter_level: methods
 version: "4.0"
-method_name: drone
+method_name: drone_mdl_high
 deployment_type: mobile
 measurement_scale: equipment
 is_follow_up: False
 sensor:
-  type: default
-  minimum_detection_limit: [0.00278] #adopted from the 1kg/hr detection limit in application ALTTECH-36 https://methane.app.cloud.gov/review?page=2&sort=product_name
+  minimum_detection_limit: [4.166666667] #adopted from the 1kg/hr detection limit in application ALTTECH-36 https://methane.app.cloud.gov/review?page=2&sort=product_name
 
 cost:
   per_day: 500
