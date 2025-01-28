@@ -1,0 +1,6 @@
+program_name: P_aircraft_base
+parameter_level: programs
+version: "4.0"
+method_labels:
+  - aircraft_base
+  - OGI_FU_base

@@ -6,7 +6,6 @@
 *.pyc
 *.vscode
 *.vscode
-**/outputs/
 *.nc
 *.p
 .hypothesis/
