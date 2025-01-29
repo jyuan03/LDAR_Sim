@@ -1,0 +1,6 @@
+program_name: P_OGI
+parameter_level: programs
+version: "4.0"
+method_labels:
+  - OGI
+global_warming_potential_CH4: 27.0
