@@ -1,7 +1,7 @@
 
 parameter_level: methods
 version: "4.0"
-method_name: OGI_perhour
+method_name: OGI_persitehigh
 deployment_type: mobile
 measurement_scale: component
 sensor:

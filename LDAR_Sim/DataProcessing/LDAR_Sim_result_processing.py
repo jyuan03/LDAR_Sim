@@ -2,41 +2,85 @@ import pandas as pd
 import os
 
 def regional_LDARSim_resultprocessing():
-    simulation_versions = ['basecase','cost_sensitivity','crew_sensitivity','gwp_AR5_20year','gwp_AR6','mdl_sensitivity','site_number', 'triannual_survey']
-    regions = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
+    basecase_df = pd.DataFrame()
+    triannual_df = pd.DataFrame()
+    crew_count_df = pd.DataFrame()
+    mdl_df = pd.DataFrame()
+    site_num_df = pd.DataFrame()
+    ogi_persite_high_df = pd.DataFrame()
 
-    annual_regional_average_cost = pd.DataFrame()
-
-    triannual_regional_average_cost = pd.DataFrame()
-
+    simulation_versions = ['basecase', 'crew_count', 'mdl', 'site_num', 'ogi_persite_high', 'triannual']
+    regionslist = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
     for simulation in simulation_versions:
-        for region in regions:
+        for region in regionslist:
+            if simulation == 'basecase':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_raw_data =
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                basecase_df = pd.concat([basecase_df,annual_regional_combined_data.head(1)])
 
-            datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/annual_LDARSim4_{region}/Cost Summary.csv'
-            annual_regional_raw_data = pd.read_csv(datapath_path)
-            annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
-            annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
-            annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
-            annual_regional_average_cost = pd.concat([annual_regional_average_cost,annual_regional_combined_data])
-            annual_regional_average_cost['Region'] = region
+            elif simulation == 'triannual':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/triannual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                triannual_df = pd.concat([triannual_df,annual_regional_combined_data.head(1)])
 
-            triannual_regional_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/annual_LDARSim4_{region}/Cost Summary.csv'
-            triannual_regional_raw_data = pd.read_csv(triannual_regional_path)
-            triannual_regional_combined_data = triannual_regional_raw_data.groupby('Program Name').mean()
-            triannual_regional_combined_data = triannual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
-            triannual_regional_combined_data = triannual_regional_combined_data.reset_index(names=['Program Name'])
-            triannual_regional_average_cost = pd.concat([triannual_regional_average_cost,triannual_regional_combined_data])
-            triannual_regional_average_cost['Region'] = region
+            elif simulation == 'crew_count':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                crew_count_df = pd.concat([crew_count_df,annual_regional_combined_data.head(1)])
 
-    annual_regional_average_cost.to_csv('LDAR_Sim_regional_annual.csv')
+            elif simulation == 'mdl':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                mdl_df = pd.concat([mdl_df,annual_regional_combined_data.head(1)])
 
-    triannual_regional_average_cost.to_csv('LDAR_Sim_regional_triannual.csv')
+            elif simulation == 'site_num':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                site_num_df = pd.concat([site_num_df,annual_regional_combined_data.head(1)])
+
+            elif simulation == 'ogi_persite_high':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                ogi_persite_high_df = pd.concat([ogi_persite_high_df,annual_regional_combined_data.head(1)])
+
+    basecase_df.to_csv('basecase.csv')
+    triannual_df.to_csv('sensitivity_triannual.csv')
+    crew_count_df.to_csv('sensitivity_crew_count.csv')
+    mdl_df.to_csv('sensitivity_mdl.csv')
+    site_num_df.to_csv('sensitivity_site_num.csv')
+    ogi_persite_high_df.to_csv('sensitivity_ogi_persite_high.csv')
+
+
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['basecase', 'cost_sensitivity', 'crew_sensitivity', 'gwp_AR5_20year', 'gwp_AR6',
-                           'mdl_sensitivity', 'site_number', 'triannual_survey']
-    regionslist = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
+    simulation_versions = ['basecase', 'cost_sensitivity', 'mdl_sensitivity', 'site_number', 'triannual_survey'] #, 'crew_sensitivity']
+    regionslist = ['DV'] #['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
     for simulation in simulation_versions:
         for region in regionslist:
             if simulation == 'triannual_survey':
@@ -44,8 +88,14 @@ def run_LDAR_sim():
             else:
                 annualnumber = 'annual'
 
-            filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}'
-            os.system(filename)
+            if simulation == 'cost_sensitivity':
+                for cost_type in ['OGI_persitehigh']: #'OGI_perhour',
+                    filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}/{cost_type}'
+                    os.system(filename)
+
+            else:
+                filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}'
+                os.system(filename)
 
     return
 

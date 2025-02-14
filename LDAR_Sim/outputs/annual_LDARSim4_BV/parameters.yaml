@@ -735,7 +735,7 @@ programs:
     parameter_level: programs
     program_name: P_truck
     version: '4.0'
-simulation_count: 5
+simulation_count: 1
 version: '4.0'
 virtual_world:
   consider_weather: false
@@ -771,7 +771,7 @@ virtual_world:
       file: null
       values:
       - 14.0
-  site_samples: 10
+  site_samples: 500
   start_date:
   - 2022
   - 1

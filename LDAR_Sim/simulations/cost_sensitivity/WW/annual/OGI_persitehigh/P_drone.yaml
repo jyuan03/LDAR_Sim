@@ -3,4 +3,4 @@ parameter_level: programs
 version: "4.0"
 method_labels:
   - drone
-  - OGI_FU
+  - OGI_FU_persitehigh
