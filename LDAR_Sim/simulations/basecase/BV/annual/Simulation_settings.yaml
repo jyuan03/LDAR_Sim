@@ -1,6 +1,6 @@
 
 #~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
-input_directory: ./inputs/triannual_LDARSim4_BV
+input_directory: ./inputs/annual_LDARSim4_BV
 simulation_count: 5
 output_directory: ./outputs/annual_LDARSim4_BV
 parameter_level: simulation_settings

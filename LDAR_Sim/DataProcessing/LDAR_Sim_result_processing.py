@@ -7,16 +7,16 @@ def regional_LDARSim_resultprocessing():
     crew_count_df = pd.DataFrame()
     mdl_df = pd.DataFrame()
     site_num_df = pd.DataFrame()
+    site_num_180_df = pd.DataFrame()
     ogi_persite_high_df = pd.DataFrame()
 
-    simulation_versions = ['basecase', 'crew_count', 'mdl', 'site_num', 'ogi_persite_high', 'triannual']
+    simulation_versions = ['site_num_180'] #['basecase', 'crew_count', 'mdl', 'site_num', 'site_num_180', 'ogi_persite_high', 'triannual']
     regionslist = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
     for simulation in simulation_versions:
         for region in regionslist:
             if simulation == 'basecase':
                 datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
                 annual_regional_raw_data = pd.read_csv(datapath_path)
-                annual_regional_raw_data =
                 annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
                 annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
                 annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
@@ -58,6 +58,14 @@ def regional_LDARSim_resultprocessing():
                 annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
                 annual_regional_combined_data['Region'] = region
                 site_num_df = pd.concat([site_num_df,annual_regional_combined_data.head(1)])
+            elif simulation == 'site_num_180':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                site_num_180_df = pd.concat([site_num_180_df,annual_regional_combined_data.head(1)])
 
             elif simulation == 'ogi_persite_high':
                 datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
@@ -73,14 +81,15 @@ def regional_LDARSim_resultprocessing():
     crew_count_df.to_csv('sensitivity_crew_count.csv')
     mdl_df.to_csv('sensitivity_mdl.csv')
     site_num_df.to_csv('sensitivity_site_num.csv')
+    site_num_180_df.to_csv('sensitivity_site_num_180.csv')
     ogi_persite_high_df.to_csv('sensitivity_ogi_persite_high.csv')
 
 
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['basecase', 'cost_sensitivity', 'mdl_sensitivity', 'site_number', 'triannual_survey'] #, 'crew_sensitivity']
-    regionslist = ['DV'] #['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
+    simulation_versions = ['site_number_180'] #['basecase', 'cost_sensitivity', 'mdl_sensitivity', 'site_number', 'triannual_survey'] #, 'crew_sensitivity']
+    regionslist = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
     for simulation in simulation_versions:
         for region in regionslist:
             if simulation == 'triannual_survey':
@@ -96,9 +105,11 @@ def run_LDAR_sim():
             else:
                 filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}'
                 os.system(filename)
+# "python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/totalsite_number/DV/annual"
+
 
     return
 
 if __name__ == '__main__':
-    # regional_LDARSim_resultprocessing()
-    run_LDAR_sim()
+    regional_LDARSim_resultprocessing()
+    # run_LDAR_sim()
