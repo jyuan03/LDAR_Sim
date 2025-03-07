@@ -1,0 +1,9 @@
+
+#~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
+input_directory: ./inputs/default_annual_LDARSim4_BV
+simulation_count: 2
+output_directory: ./outputs/default/annual_LDARSim4_BV_trial8
+parameter_level: simulation_settings
+preseed_random: true
+baseline_program: P_none
+version: "4.0"

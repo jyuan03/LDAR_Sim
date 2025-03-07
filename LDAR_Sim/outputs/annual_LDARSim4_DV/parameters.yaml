@@ -735,7 +735,7 @@ programs:
     parameter_level: programs
     program_name: P_truck
     version: '4.0'
-simulation_count: 1
+simulation_count: 5
 version: '4.0'
 virtual_world:
   consider_weather: false
@@ -745,12 +745,12 @@ virtual_world:
     non_repairable_emissions:
       duration: 365
       emissions_production_rate: 0.1
-      emissions_rate_source: test2
+      emissions_rate_source: meter_instru_vent
       multiple_emissions_per_source: true
     repairable_emissions:
       duration: 365
       emissions_production_rate: 0.1
-      emissions_rate_source: test1
+      emissions_rate_source: compressor
       multiple_emissions_per_source: true
   end_date:
   - 2022
@@ -771,7 +771,7 @@ virtual_world:
       file: null
       values:
       - 14.0
-  site_samples: 1200
+  site_samples: 10
   start_date:
   - 2022
   - 1

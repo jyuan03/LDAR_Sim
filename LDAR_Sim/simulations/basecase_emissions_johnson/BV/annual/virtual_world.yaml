@@ -11,11 +11,11 @@ emissions:
     emissions_rate_source: "test1" # The name of a column in the emissions file
     duration: 365 # Natural repair delay of repairable emissions
     multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
-  non_repairable_emissions:
-    emissions_production_rate: 0.1  # The production rate of non-repairable emissions
-    emissions_rate_source: "test2" # The name of a column in the emissions file
-    duration: 365 # Natural repair delay of non-repairable emissions
-    multiple_emissions_per_source: True # True/False of whether non-repairable emission source can produce multiple emissions
+#  non_repairable_emissions:
+#    emissions_production_rate: 0.1  # The production rate of non-repairable emissions
+#    emissions_rate_source: "test2" # The name of a column in the emissions file
+#    duration: 365 # Natural repair delay of non-repairable emissions
+#    multiple_emissions_per_source: True # True/False of whether non-repairable emission source can produce multiple emissions
 infrastructure:
   site_type_file: "site_type_CE.csv" # Infrastructure file defining site types
   sites_file: "BV_site.csv" #Infrastructure file defining sites
