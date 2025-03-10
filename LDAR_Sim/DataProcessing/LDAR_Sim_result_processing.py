@@ -88,8 +88,8 @@ def regional_LDARSim_resultprocessing():
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['site_number_180', 'basecase', 'cost_sensitivity', 'mdl_sensitivity', 'site_number', 'triannual_survey'] #, 'crew_sensitivity']
-    regionslist = ['DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
+    simulation_versions = ['site_number' , 'site_number_180']#'crew_sensitivity', 'cost_sensitivity'], 'basecase', 'mdl_sensitivity', 'triannual_survey']#, 'site_number' , 'site_number_180'] #
+    regionslist = ['DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']#
     for simulation in simulation_versions:
         for region in regionslist:
             if simulation == 'triannual_survey':
@@ -105,11 +105,11 @@ def run_LDAR_sim():
             else:
                 filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}'
                 os.system(filename)
-# "python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/basecase_emissions_default/BV/annual"
+# "python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/triannual_survey/BV/triannual"
 
 
     return
 
 if __name__ == '__main__':
-    regional_LDARSim_resultprocessing()
-    # run_LDAR_sim()
+    # regional_LDARSim_resultprocessing()
+    run_LDAR_sim()

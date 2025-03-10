@@ -91,7 +91,8 @@ emissions:
     emissions_production_rate: 0.1 # The production rate of repairable emissions
     emissions_rate_source: "meter_instru_vent" # The name of a column in the emissions file
     duration: 365 # Natural repair delay of repairable emissions
-    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissionsinfrastructure:
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+infrastructure:
   site_type_file: "site_type_CE.csv" # Infrastructure file defining site types
   sites_file: "SL_site.csv" #Infrastructure file defining sites
   equipment_group_file: "equipment_int_CE.csv" #Infrastructure file defining equipment groups at sites
