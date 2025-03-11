@@ -1,0 +1,9 @@
+
+#~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
+input_directory: ./inputs/johnson_annual_LDARSim4_EDM
+simulation_count: 5
+output_directory: ./outputs/johnson/annual_LDARSim4_EDM
+parameter_level: simulation_settings
+preseed_random: true
+baseline_program: P_none
+version: "4.0"

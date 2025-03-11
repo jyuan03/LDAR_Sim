@@ -1,0 +1,15 @@
+parameter_level: methods
+version: "4.0"
+method_name: OGI_FU
+deployment_type: mobile
+measurement_scale: component
+crew_count: 1
+sensor:
+  type: OGI_camera_zim
+is_follow_up: True
+cost:
+  per_day: 0
+  per_site: 500
+time_between_sites:
+  values: [30]
+survey_time: 120

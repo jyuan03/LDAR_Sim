@@ -1,0 +1,27 @@
+component,source,EPR,ERS,repairable,duration,multiple_emissions
+comp1,test1,0.005,test1,TRUE,365,TRUE
+comp2,test2,0.005,test2,FALSE,365,TRUE
+Compressor Buildings,compressor_buildings,0.005,compressor_buildings,TRUE,365,TRUE
+Dehydrators,dehydrators,0.005,dehydrators,TRUE,365,TRUE
+Power Generators,power_generators,0.005,power_generators,TRUE,365,TRUE
+Tanks,tanks,0.005,tanks,TRUE,365,TRUE
+Separators,separators,0.005,separators,TRUE,365,TRUE
+Line Heater,lineheater,0.005,lineheater,TRUE,365,TRUE
+Level Controller,level_controller,0.005,level_controller,TRUE,365,TRUE
+Pressure Controller,pressure_controller,0.005,pressure_controller,TRUE,365,TRUE
+Pump,pump,0.005,pump,TRUE,365,TRUE
+Transducer,transducer,0.005,transducer,TRUE,365,TRUE
+Positioner,positioner,0.005,positioner,TRUE,365,TRUE
+Compressor Rod-Packing,,0.005,test1,TRUE,365,TRUE
+Connector,flange_thread,0.005,flange_thread,TRUE,365,TRUE
+Control Valve,controller,0.005,controller,TRUE,365,TRUE
+Meter,meter_instru,0.005,meter_instru,TRUE,365,TRUE
+Open-Ended Line,OEL_vent_leak,0.005,OEL_vent_leak,TRUE,365,TRUE
+PRV/PSV,PSV,0.005,PSV,TRUE,365,TRUE
+Pump Seal,pump_packing,0.005,pump_packing,TRUE,365,TRUE
+Regulator,regulator,0.005,regulator,TRUE,365,TRUE
+Valve,valve,0.005,valve,TRUE,365,TRUE
+Catadyne Heater,cat_heater,0.005,cat_heater,TRUE,365,TRUE
+Other tank,tank_other,0.005,tank_other,TRUE,365,TRUE
+"Compressor, Cylinder Head",compressor,0.005,compressor,TRUE,365,TRUE
+Intermittent,actuator,0.005,actuator,FALSE,365,TRUE
