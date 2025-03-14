@@ -7,7 +7,7 @@ measurement_scale: equipment
 is_follow_up: False
 sensor:
   type: default
-  minimum_detection_limit: [0.01]
+  minimum_detection_limit: [0.001] ##estimated from 0.0016g/s from 90% detection limit from ALLTECH-70 https://methane.app.cloud.gov/review/70
 cost:
   per_day: 400
 coverage:

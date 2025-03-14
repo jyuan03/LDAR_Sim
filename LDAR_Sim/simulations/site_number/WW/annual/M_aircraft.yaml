@@ -7,7 +7,7 @@ measurement_scale: equipment
 is_follow_up: False
 sensor:
   type: default
-  minimum_detection_limit: [0.00278] #estimated from 1kg/h detection limit from https://www.bridgerphotonics.com/methane-detection-sensitivity
+  minimum_detection_limit: [0.278] #estimated from 1kg/h detection limit from https://www.bridgerphotonics.com/methane-detection-sensitivity
 cost:
   per_day: 250
 coverage:

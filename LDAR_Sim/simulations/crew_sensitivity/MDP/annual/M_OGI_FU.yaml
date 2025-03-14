@@ -5,7 +5,7 @@ deployment_type: mobile
 measurement_scale: component
 crew_count: 3
 sensor:
-#  type: OGI_camera_zim
+  type: OGI_camera_zim
   minimum_detection_limit: [0.0053] #adapted from 19g/h detection limit from https://www.flir.ca/instruments/optical-gas-imaging/#:~:text=Your%20optical%20gas%20imaging%20equipment%20must%20be%20capable%20of%20detecting,≤1%20meter%2Fsecond).
 
 is_follow_up: True

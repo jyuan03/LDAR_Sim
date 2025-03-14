@@ -6,7 +6,7 @@ deployment_type: mobile
 measurement_scale: component
 sensor:
   type: OGI_camera_zim
-  minimum_detection_limit: [0.04325] #adapted from 19g/h detection limit from https://www.flir.ca/instruments/optical-gas-imaging/#:~:text=Your%20optical%20gas%20imaging%20equipment%20must%20be%20capable%20of%20detecting,≤1%20meter%2Fsecond).
+  minimum_detection_limit: [0.04325] #estimated from 155.7 g/h for 90% detection from ALLTECH 20  https://cg-e7a81369-5de4-401e-bad8-901e7388d350.s3.us-gov-west-1.amazonaws.com/DNOOV2_METEC%20Xplorobot%20Laser%20OGI%20Detection%20and%20Quantification%20Report%2020231011.pdf?AWSAccessKeyId=AKIAR7FXZINYN2D2KQXG&Signature=VXTqwwpxElnc7aHwbKxWGUZzB%2Bs%3D&Expires=17375036673
 cost:
   per_site: 1438 #from page 34 of https://static.aer.ca/prd/documents/reports/Alternative_methane_detection_tech_evaluation.pdf
 coverage:

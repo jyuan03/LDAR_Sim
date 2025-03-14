@@ -188,18 +188,18 @@ def regional_LDARSim_resultprocessing():
     figure1_label_regionvscases.to_csv('heatmap_label_regionvscases.csv')
     bv_samplecase.to_csv('heatmap_casesvstech_BV.csv')
     dv_samplecase.to_csv('heatmap_casesvstech_DV.csv')
-    edm_samplecase.to_csv('heatmap_casesvstech_EDM.csv')
-    gp_samplecase.to_csv('heatmap_casesvstech_GP.csv')
+    edm_samplecase.to_csv('heatmap_casesvstech_EDM.csv')    gp_samplecase.to_csv('heatmap_casesvstech_GP.csv')
     mdp_samplecase.to_csv('heatmap_casesvstech_MDP.csv')
     mh_samplecase.to_csv('heatmap_casesvstech_MH.csv')
     rd_samplecase.to_csv('heatmap_casesvstech_RD.csv')
     sl_samplecase.to_csv('heatmap_casesvstech_SL.csv')
     ww_samplecase.to_csv('heatmap_casesvstech_WW.csv')
 
+
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['basecase_emissions_johnson_test'] #'crew_sensitivity','OGI_sensor', 'cost_sensitivity'], 'basecase', 'mdl_sensitivity', 'triannual_survey']#, 'site_number' , 'site_number_180'] #'site_number' , 'site_number_180'
+    simulation_versions = ['basecase','basecase_emissions_johnson_test','cost_sensitivity','crew_sensitivity','mdl_sensitivity','OGI_sensor', 'triannual_survey', 'site_number' , 'site_number_180'] #'site_number' , 'site_number_180'
     regionslist = ['BV','DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']#
     for simulation in simulation_versions:
         for region in regionslist:

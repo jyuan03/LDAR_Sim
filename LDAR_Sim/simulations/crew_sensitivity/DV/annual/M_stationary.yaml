@@ -5,7 +5,7 @@ deployment_type: stationary
 measurement_scale: site
 sensor:
   type: default
-  minimum_detection_limit: [5.55]
+  minimum_detection_limit: [0.138]
 is_follow_up: False
 cost:
   per_day: 3

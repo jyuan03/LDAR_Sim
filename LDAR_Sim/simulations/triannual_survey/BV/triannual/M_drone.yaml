@@ -6,7 +6,7 @@ deployment_type: mobile
 measurement_scale: equipment
 is_follow_up: False
 sensor:
-  minimum_detection_limit: [0.00278] #adopted from the 1kg/hr detection limit in application ALTTECH-36 https://methane.app.cloud.gov/review?page=2&sort=product_name
+  minimum_detection_limit: 0.278 #adopted from the 1kg/hr detection limit in application ALTTECH-36 https://methane.app.cloud.gov/review?page=2&sort=product_name
 
 cost:
   per_day: 500
