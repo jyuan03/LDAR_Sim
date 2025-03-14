@@ -1,0 +1,10 @@
+Region,basecase,crew_count,johnson,mdl,ogi_persite_high,ogi_sensor,site_num,site_num_180,triannual
+BV,P_aircraft,P_truck,P_aircraft,P_truck,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft
+DV,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft,P_aircraft
+EDM,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft,P_aircraft
+GP,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft,P_aircraft
+MDP,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft,P_aircraft
+MH,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft,P_aircraft
+RD,P_aircraft,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft
+SL,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_drone,P_aircraft,P_truck,P_aircraft
+WW,P_aircraft,P_aircraft,P_aircraft,P_truck,P_truck,P_truck,P_aircraft,P_aircraft,P_aircraft

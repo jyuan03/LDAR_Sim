@@ -745,12 +745,12 @@ virtual_world:
     non_repairable_emissions:
       duration: 365
       emissions_production_rate: 0.1
-      emissions_rate_source: test2
+      emissions_rate_source: meter_instru_vent
       multiple_emissions_per_source: true
     repairable_emissions:
       duration: 365
       emissions_production_rate: 0.1
-      emissions_rate_source: test1
+      emissions_rate_source: compressor
       multiple_emissions_per_source: true
   end_date:
   - 2022
