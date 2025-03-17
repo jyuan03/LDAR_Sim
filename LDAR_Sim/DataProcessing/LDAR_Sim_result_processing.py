@@ -1,9 +1,6 @@
 import pandas as pd
 import os
 
-from LDAR_Sim.testing.unit_testing.test_sensitivity_analysis.test_parameter_variator.test_vary_parameter_values import \
-    get_simulation_parameters_1
-
 
 def regional_LDARSim_resultprocessing():
     basecase_df = pd.DataFrame()
@@ -188,7 +185,8 @@ def regional_LDARSim_resultprocessing():
     figure1_label_regionvscases.to_csv('heatmap_label_regionvscases.csv')
     bv_samplecase.to_csv('heatmap_casesvstech_BV.csv')
     dv_samplecase.to_csv('heatmap_casesvstech_DV.csv')
-    edm_samplecase.to_csv('heatmap_casesvstech_EDM.csv')    gp_samplecase.to_csv('heatmap_casesvstech_GP.csv')
+    edm_samplecase.to_csv('heatmap_casesvstech_EDM.csv')
+    gp_samplecase.to_csv('heatmap_casesvstech_GP.csv')
     mdp_samplecase.to_csv('heatmap_casesvstech_MDP.csv')
     mh_samplecase.to_csv('heatmap_casesvstech_MH.csv')
     rd_samplecase.to_csv('heatmap_casesvstech_RD.csv')
@@ -199,8 +197,8 @@ def regional_LDARSim_resultprocessing():
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['basecase','basecase_emissions_johnson_test','cost_sensitivity','crew_sensitivity','mdl_sensitivity','OGI_sensor', 'triannual_survey', 'site_number' , 'site_number_180'] #'site_number' , 'site_number_180'
-    regionslist = ['BV','DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']#
+    simulation_versions = ['site_number' , 'site_number_180'] #'basecase','basecase_emissions_johnson_test','cost_sensitivity','crew_sensitivity','mdl_sensitivity','OGI_sensor', 'triannual_survey',
+    regionslist = [ 'MH', 'RD','SL','WW']#'BV','DV', 'EDM','GP','MDP',
     for simulation in simulation_versions:
         for region in regionslist:
             if simulation == 'triannual_survey':
@@ -216,11 +214,13 @@ def run_LDAR_sim():
             else:
                 filename = f'python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/{simulation}/{region}/{annualnumber}'
                 os.system(filename)
+
+        print(region + " " + simulation)
 # "python C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/src/ldar_sim_run.py --in_dir ./simulations/triannual_survey/BV/triannual"
 
 
     return
 
 if __name__ == '__main__':
-    regional_LDARSim_resultprocessing()
-    # run_LDAR_sim()
+    # regional_LDARSim_resultprocessing()
+    run_LDAR_sim()
