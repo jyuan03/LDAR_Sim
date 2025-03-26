@@ -1,0 +1,9 @@
+
+#~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
+input_directory: ./inputs/triannual_LDARSim4_MDP
+simulation_count: 5
+output_directory: ./outputs/sensitivity/coverage/annual_LDARSim4_MDP
+parameter_level: simulation_settings
+preseed_random: true
+baseline_program: P_none
+version: "4.0"

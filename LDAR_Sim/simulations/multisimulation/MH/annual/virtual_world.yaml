@@ -1,0 +1,103 @@
+
+#~~~~~CHANGE FILES FOR CE SOURCE DATASETS~~~~~~~~~~~~~~~
+#~~~~~CHANGE SITEFILE FOR REGION~~~~~~~~~~~~~~~
+version: "4.0"
+parameter_level: virtual_world
+site_samples: 10
+emissions:
+  emissions_file: "emissions_CE.csv" #File containing sample emissions rates or emissions distributions.
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "flange_thread" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "controller" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "meter_instru" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "OEL_vent_leak" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "PSV" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "pump_packing" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "regulator" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "thief_hatch" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "valve" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "cat_heater" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "tank_other" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "compressor" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+
+  non_repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "actuator" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  non_repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "controller_vent" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  non_repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "regulator_vent" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  non_repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "pump_vent" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+  non_repairable_emissions:
+    emissions_production_rate: 0.1 # The production rate of repairable emissions
+    emissions_rate_source: "meter_instru_vent" # The name of a column in the emissions file
+    duration: 365 # Natural repair delay of repairable emissions
+    multiple_emissions_per_source: True # True/False of whether repairable emission source can produce multiple emissions
+infrastructure:
+  site_type_file: "site_type_CE.csv" # Infrastructure file defining site types
+  sites_file: "MH_site.csv" #Infrastructure file defining sites
+  equipment_group_file: "equipment_int_CE.csv" #Infrastructure file defining equipment groups at sites
+  sources_file: "sources_CE.csv" #Infrastructure file defining emissions sources at equipment
+
+weather_file: "weather_alberta.nc"
+start_date: [2022, 1, 1]
+end_date: [2022, 12, 31]

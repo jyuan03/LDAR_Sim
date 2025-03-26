@@ -1,0 +1,18 @@
+parameter_level: methods
+version: "4.0"
+method_name: stationary
+deployment_type: stationary
+measurement_scale: site
+sensor:
+  type: default
+  minimum_detection_limit: [0.138] #based on 0.5 kg/h from 90% detection ALLTEC 46 Project Canary 2024 ADED Results.pdf https://cg-e7a81369-5de4-401e-bad8-901e7388d350.s3.us-gov-west-1.amazonaws.com/IN9CJL_Project%20Canary%202024%20ADED%20Results.pdf?AWSAccessKeyId=AKIAR7FXZINYN2D2KQXG&Signature=yeZ6NCVXXc1buZOvOYKppljVWfg%3D&Expires=1737494641
+
+is_follow_up: False
+cost:
+  per_day: 3
+  upfront: 6000
+coverage:
+  spatial: 1
+  temporal: 1
+follow_up:
+  delay: 7
