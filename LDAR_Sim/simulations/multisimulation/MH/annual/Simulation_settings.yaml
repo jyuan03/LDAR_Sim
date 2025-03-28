@@ -1,7 +1,7 @@
 
 #~~~~~CHANGE INPUT AND OUTPUT FOR REGION~~~~~~~~~~~~~~~
 input_directory: ./inputs/triannual_LDARSim4_MH
-simulation_count: 50
+simulation_count: 20
 output_directory: ./outputs/sensitivity/multisimulation/annual_LDARSim4_MH
 parameter_level: simulation_settings
 preseed_random: true

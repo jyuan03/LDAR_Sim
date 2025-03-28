@@ -13,9 +13,10 @@ def regional_LDARSim_resultprocessing():
     ogi_sensor_df = pd.DataFrame()
     johnson_df = pd.DataFrame()
     coverage_df = pd.DataFrame()
+    multisimulation_df = pd.DataFrame()
     all_tech_df = pd.DataFrame()
 
-    simulation_versions = ['basecase', 'coverage','crew_count', 'mdl', 'site_num', 'site_num_180', 'ogi_persite_high', 'ogi_sensor', 'triannual', 'johnson']
+    simulation_versions = ['basecase', 'multisimulation','coverage','crew_count', 'mdl', 'site_num', 'site_num_180', 'ogi_persite_high', 'ogi_sensor', 'triannual', 'johnson']
     regionslist = ['BV', 'DV', 'EDM','GP','MDP', 'MH', 'RD','SL','WW']
     for simulation in simulation_versions:
         for region in regionslist:
@@ -122,6 +123,18 @@ def regional_LDARSim_resultprocessing():
                 coverage_df = pd.concat([coverage_df, annual_regional_combined_data.head(1)])
                 all_tech_df = pd.concat([all_tech_df, annual_regional_combined_data])
 
+            elif simulation == 'multisimulation':
+                datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/sensitivity/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
+                annual_regional_raw_data = pd.read_csv(datapath_path)
+                annual_regional_combined_data = annual_regional_raw_data.groupby('Program Name').mean()
+                annual_regional_combined_data = annual_regional_combined_data.sort_values(
+                    by=['Mitigation Ratio ($/tonne CO2e)'])
+                annual_regional_combined_data = annual_regional_combined_data.reset_index(names=['Program Name'])
+                annual_regional_combined_data['Region'] = region
+                annual_regional_combined_data['Simulation'] = simulation
+                multisimulation_df = pd.concat([multisimulation_df, annual_regional_combined_data.head(1)])
+                all_tech_df = pd.concat([all_tech_df, annual_regional_combined_data])
+
 
             elif simulation == 'johnson':
                 datapath_path = f'C:/Users/jyuan/OneDrive/Documents/GitHub/LDAR_Sim/LDAR_Sim/outputs/{simulation}/annual_LDARSim4_{region}/Cost Summary.csv'
@@ -135,11 +148,13 @@ def regional_LDARSim_resultprocessing():
                 johnson_df = pd.concat([johnson_df, annual_regional_combined_data.head(1)])
                 all_tech_df = pd.concat([all_tech_df, annual_regional_combined_data])
 
-    ldarsim_simulation_all = pd.concat([basecase_df, triannual_df, crew_count_df, mdl_df, site_num_df, site_num_180_df, ogi_persite_high_df, ogi_sensor_df, johnson_df, coverage_df])
+    ldarsim_simulation_all = pd.concat([basecase_df, triannual_df, crew_count_df, mdl_df, site_num_df, site_num_180_df, ogi_persite_high_df, ogi_sensor_df, johnson_df, coverage_df, multisimulation_df])
+    ldarsim_simulation_all = ldarsim_simulation_all.sort_values('Region')
 
     figure1_difference_regionvscases = ldarsim_simulation_all.pivot(index='Region', columns='Simulation', values='Mitigation Ratio ($/tonne CO2e)')
-    simulations_nobasecase = ['crew_count', 'mdl', 'site_num', 'site_num_180', 'ogi_persite_high',
-                           'ogi_sensor', 'triannual', 'johnson', 'coverage']
+    simulations_nobasecase = ['multisimulation', 'coverage', 'crew_count', 'mdl', 'site_num', 'site_num_180', 'ogi_persite_high',
+                           'ogi_sensor', 'triannual', 'johnson']
+
     for simulation in simulations_nobasecase:
         figure1_difference_regionvscases[simulation] = figure1_difference_regionvscases[simulation] - figure1_difference_regionvscases['basecase']
 
@@ -182,7 +197,7 @@ def regional_LDARSim_resultprocessing():
     # for simulation in simulations_nobasecase:
     #     ww_samplecase[simulation] = ww_samplecase[simulation] - ww_samplecase['basecase']
 
-
+    all_tech_df.to_csv('all_tech.csv')
     basecase_df.to_csv('basecase1.csv')
     triannual_df.to_csv('sensitivity_triannual1.csv')
     crew_count_df.to_csv('sensitivity_crew_count1.csv')
@@ -210,7 +225,7 @@ def regional_LDARSim_resultprocessing():
     return
 
 def run_LDAR_sim():
-    simulation_versions = ['coverage'] #'triannual_survey','basecase','site_number','site_number_180' ,'OGI_sensor' 'basecase_emissions_johnson_test','cost_sensitivity','crew_sensitivity','mdl_sensitivity',,,
+    simulation_versions = ['multisimulation'] #'coverage','triannual_survey','basecase','site_number','site_number_180' ,'OGI_sensor' 'basecase_emissions_johnson_test','cost_sensitivity','crew_sensitivity','mdl_sensitivity',,,
     regionslist = [ 'BV','DV', 'EDM','GP','MDP','MH', 'RD','SL','WW']
     for simulation in simulation_versions:
         for region in regionslist:
@@ -235,5 +250,5 @@ def run_LDAR_sim():
     return
 
 if __name__ == '__main__':
-    # regional_LDARSim_resultprocessing()
-    run_LDAR_sim()
+    regional_LDARSim_resultprocessing()
+    # run_LDAR_sim()
