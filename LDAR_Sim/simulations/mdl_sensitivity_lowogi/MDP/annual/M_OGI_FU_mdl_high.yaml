@@ -1,0 +1,16 @@
+parameter_level: methods
+version: "4.0"
+method_name: OGI_FU_mdl_high
+deployment_type: mobile
+measurement_scale: component
+crew_count: 1
+sensor:
+  minimum_detection_limit: [0.000056] #Instrument Name: GMP02 from Konica Minolta from Natural Gas STAR, https://www.epa.gov/natural-gas-star-program/oil-and-gas-equipment-and-service-providers-directory
+
+is_follow_up: True
+cost:
+  per_day: 0
+  per_site: 500
+time_between_sites:
+  values: [30]
+survey_time: 120

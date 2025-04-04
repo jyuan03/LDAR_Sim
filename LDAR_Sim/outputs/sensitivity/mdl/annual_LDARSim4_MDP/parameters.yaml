@@ -116,7 +116,7 @@ programs:
             - 0.0
             - 0.0
             quantification_type: default
-          type: OGI_camera_zim
+          type: default
         survey_time: 120
         surveys_per_year: 1
         time_between_sites:
@@ -197,7 +197,7 @@ programs:
             - 0.0
             - 0.0
             quantification_type: default
-          type: OGI_camera_zim
+          type: default
         survey_time: 120
         surveys_per_year: null
         time_between_sites:
@@ -345,7 +345,7 @@ programs:
             - 0.0
             - 0.0
             quantification_type: default
-          type: OGI_camera_zim
+          type: default
         survey_time: 120
         surveys_per_year: null
         time_between_sites:
@@ -505,7 +505,7 @@ programs:
             - 0.0
             - 0.0
             quantification_type: default
-          type: OGI_camera_zim
+          type: default
         survey_time: 120
         surveys_per_year: null
         time_between_sites:
@@ -647,7 +647,7 @@ programs:
             - 0.0
             - 0.0
             quantification_type: default
-          type: OGI_camera_zim
+          type: default
         survey_time: 120
         surveys_per_year: null
         time_between_sites:
